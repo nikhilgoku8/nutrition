@@ -97,13 +97,96 @@
                 your body respond better to treatment.</p>
                 <p>At <b>Nutrition With Vibha</b>, we believe healing works best when <b>food and
                 medicine work together.</b></p>
+                <br>
                 <p><b><i>This free consultation is a calm, judgement free space to:</i></b></p>
             </div>
+            <div class="three_boxes">
+                <div class="info_box">
+                    <div class="img_box">
+                        <img src="images/food-plate.jpg">
+                    </div>
+                    <div class="text">Understand your condition and lifestyle</div>
+                </div>
+                <div class="info_box">
+                    <div class="img_box">
+                        <img src="images/doctor-with-food.jpg">
+                    </div>
+                    <div class="text">Learn how nutrition can support our medical treatment </div>
+                </div>
+                <div class="info_box">
+                    <div class="img_box">
+                        <img src="images/girl-in-matrix.jpg">
+                    </div>
+                    <div class="text">Gain clarity on the next right step for your body</div>
+                </div>
+            </div>
+            <p class="center">There is no pressure to commit. Only guidance to help you make the right choice for your health.</p>
 
         </div>
     </div>
 </section>
 <!-- section_2 -->
+
+<section class="section_3">
+    <div class="bg_img">
+        <img src="images/bg/what-happens-next.png">
+    </div>
+    <div class="text_overlay">
+        <div class="contain_90">
+            <div class="inner_container">
+
+                <div class="left_pane">
+                    <div class="text">What Happens Next</div>
+                </div>
+                <div class="right_pane">
+                    <ul>
+                        <li>Book your free consultation using the calendar below</li>
+                        <li>Receive a personalised WhatsApp welcome message</li>
+                        <li>Attend your free guidance call</li>
+                        <li>Choose from paid consultations starting at <b>₹1400</b></li>
+                        <li>Select plans include a complimentary copy of <br>our books The Early Series & The Health eats<br> worth <b>₹2500 for free</b></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section_3 -->
+
+<section class="section_4">
+    <div class="contain_90">
+        <div class="inner_container">
+
+            <div class="left_pane">
+                <div class="text">Why The Early Series Book?</div>
+            </div>
+            <div class="right_pane">
+                <p>Once you sign up for selected plans, you receive <br>The Early Series — a practical guide covering: - Early signs <br> Early tests - Early actions</p>
+                <p><b>For nearly 50 clinical and lifestyle conditions. <br>(MRP ₹999 | Complimentary with eligible plans)</b></p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- section_4 -->
+
+<section class="section_5">
+    <div class="contain_90">
+        <div class="inner_container">
+
+            <div class="img_box">
+                <img src="images/book.png">
+            </div>
+            <div class="text">
+                Once you sign up for selected plans, you receive The Healthy Eats a treasure trove of<br> recipes – More than 100 recipes Breakfast, snack, main meals, dessert – with insights on<br> nutrition and health
+            </div>
+            <div class="golden_band">More than 100 recipes including traditional gems (MRP ₹1499 | Complimentary with eligible plans)</div>
+
+        </div>
+    </div>
+</section>
+<!-- section_5 -->
 
 </div>
 <!-- main -->
