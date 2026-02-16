@@ -142,15 +142,18 @@ header {
 	transition: height 0.3s;
 	/*box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);*/
 }
+header .contain_90{
+	padding: 2vw 0;
+}
 header .logo {
-	width:15%;
+	width: 20%;
 	float: left;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	-ms-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
-	padding:5px 0 0 0;
+	padding: 0;
 }
 header nav {
 	display: inline-block;
@@ -158,7 +161,20 @@ header nav {
 	padding: 0% 0% 0% 0%;
 	background-color: transparent;
 	margin-top: 5px;
-	width: 68%;
+	width: unset;
+}
+header .ace-responsive-menu > li{
+	padding: 1vw 2vw;
+}
+header .ace-responsive-menu > li:last-child{
+	padding-right: 0;
+}
+header .ace-responsive-menu > li > a{
+	font-size: 1.2vw;
+	font-weight: 300;
+	text-transform: none;
+	color: #fff;
+	padding: 0;
 }
 header.smaller {
 	top:0;
@@ -169,7 +185,7 @@ header.smaller {
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
 	background:#fff;
-	padding: 1% 6% 0.5% 7%;
+	padding: 0%;
 }
 header.smaller .logo {
 	width:14%;
@@ -183,6 +199,14 @@ header.smaller nav {
 section{
 	position: relative;
 }
+
+
+.heading{
+	font-size: 2.8vw;
+	font-weight: 500;
+	color: var(--green);
+}
+
 /*hero*/
 .hero{
 	background: url(../images/bg/hero.jpg) no-repeat;
@@ -369,6 +393,7 @@ section{
 }
 .section_5 .text{
 	color: #fff;
+	padding: 1vw 0 4vw;
 }
 .section_5 .golden_band{
 	color: #fff;
@@ -377,7 +402,7 @@ section{
 	margin: auto;
 	font-size: 1.5vw;
 	font-weight: 500;
-	padding: 2vw 0;
+	padding: 1.5vw 0;
 	position: relative;
 }
 /*.section_5 .golden_band::before{
@@ -392,11 +417,43 @@ section{
 }*/
 .section_5 .golden_band::before{
 	position: absolute;
-	content: '';
-	left: 0;
-	top: 0;
-	width: 1vw;
-	height: 100%;
-	background: var(--green); /* Apply a background color or image */
-	clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Defines the three vertices */
+    content: '';
+    left: -1px;
+    top: 0;
+    width: 1.2vw;
+    height: 100%;
+    background: var(--green);
+    clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
+}
+.section_5 .golden_band::after{
+	position: absolute;
+    content: '';
+    right: -1px;
+    top: 0;
+    width: 1.2vw;
+    height: 100%;
+    background: var(--green);
+    clip-path: polygon(100% 0%, 100% 100%, 0% 50%);
+}
+.footer{
+	padding: 5vw 0;
+}
+.footer .inner_container{
+	display: flex;
+	align-items: center;
+}
+.footer .left_pane{
+	width: 50%;
+}
+.footer .left_pane ul{
+	display: flex;
+}
+.footer .left_pane ul li{
+	padding: 0 2vw 0 0;
+}
+.footer .left_pane ul li img{
+	width: 3vw;
+}
+.footer .right_pane{
+	width: 50%;
 }

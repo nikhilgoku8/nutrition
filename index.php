@@ -38,7 +38,7 @@
 
 <header>  
 
-<div class="container">
+<div class="contain_90">
     <div class="logo">
         <a href="index.php"><img src="images/logo.png" alt="" /></a>
     </div>
@@ -179,7 +179,7 @@
                 <img src="images/book.png">
             </div>
             <div class="text">
-                Once you sign up for selected plans, you receive The Healthy Eats a treasure trove of<br> recipes – More than 100 recipes Breakfast, snack, main meals, dessert – with insights on<br> nutrition and health
+                Once you sign up for selected plans, you receive The Healthy Eats a treasure trove of <br> recipes – More than 100 recipes Breakfast, snack, main meals, dessert – with insights on<br> nutrition and health
             </div>
             <div class="golden_band">More than 100 recipes including traditional gems (MRP ₹1499 | Complimentary with eligible plans)</div>
 
@@ -190,6 +190,38 @@
 
 </div>
 <!-- main -->
+
+<section class="footer">
+    <div class="contain_80">
+        <div class="inner_container">
+            
+            <div class="left_pane">
+                <div class="heading">Ready to work with us?</div>
+                <p>Start your journey today—schedule your free consultation <br> by answering the form.</p>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="images/icons/youtube.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/icons/instagram.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right_pane">
+                <div class="form_wrapper">
+                    <form>
+                        <input type="text" name="">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 
 
