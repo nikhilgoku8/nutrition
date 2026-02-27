@@ -457,3 +457,31 @@ section{
 .footer .right_pane{
 	width: 50%;
 }
+.footer .right_pane .form_wrapper{
+	background: var(--green);
+	padding: 3vw;
+	color: #fff;
+}
+.footer .right_pane .form_wrapper ul.form_pagination{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.footer .right_pane .form_wrapper ul.form_pagination li{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.last_section{
+	background: var(--green);
+	padding: 5vw 0;
+	text-align: center;
+}
+.last_section p{
+	color: #fff;
+}
+.last_section p b{
+	color: #fff;
+	font-style: italic;
+	font-size: 1.2em;
+}

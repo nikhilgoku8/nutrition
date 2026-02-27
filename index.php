@@ -213,8 +213,117 @@
             </div>
             <div class="right_pane">
                 <div class="form_wrapper">
-                    <form>
-                        <input type="text" name="">
+                    <form id="enquire_form" action="" method="POST">
+
+                        <ul class="form_pagination">
+                            <li class="form_section_1"></li>
+                            <li class="form_section_2"></li>
+                        </ul>
+                        <div class="form_section form_section_1">
+                            <div class="form_step">Step 1 of 2</div>
+                            <div class="col-sm-12 form-group">
+                                <div class="title">How can we help you?</div>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <label class="form-label">Name*</label>
+                                <div class="error form_error form-error-symtoms"></div>
+                                <div class="checkboxes_wrapper">
+                                    <ul>
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" name="symtoms[]" value="Metabolic Syndrome">
+                                                <span>Metabolic Syndrome</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" name="symtoms[]" value="Weight Loss">
+                                                <span>Weight Loss</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" name="symtoms[]" value="PCOS">
+                                                <span>PCOS</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" name="symtoms[]" value="Diabetes">
+                                                <span>Diabetes</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" name="symtoms[]" value="Metabolic Syndrome">
+                                                <span>Metabolic Syndrome</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" name="symtoms[]" value="Fatty Liver">
+                                                <span>Fatty Liver</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" name="symtoms[]" value="Anemia">
+                                                <span>Anemia</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <button type="button">Next Arrow</button>
+                            </div>
+                        </div>
+                        <!-- <div class="form_section form_section_2">
+                            <div class="form_step">Step 2 of 2</div>
+                            <div class="col-sm-12 form-group">
+                                <div class="title">How can we help you?</div>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <label class="form-label">First Name*</label>
+                                <div class="error form_error form-error-fname"></div>
+                                <input name="fname" id="fname" class="form-control" placeholder="Enter your First Name*" type="text">
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <label class="form-label">Last Name*</label>
+                                <div class="error form_error form-error-fname"></div>
+                                <input name="lname" id="lname" class="form-control" placeholder="Enter your Last Name*" type="text">
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <label class="form-label">Age*</label>
+                                <div class="error form_error form-error-age"></div>
+                                <input name="age" id="age" class="form-control" placeholder="Enter your age*" type="text">
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <label class="form-label">Mobile*</label>
+                                <div class="error form_error form-error-phone"></div>
+                                <input name="phone" id="phone" class="form-control" placeholder="Enter your mobile no*" type="text">
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <label class="form-label">Email*</label>
+                                <div class="error form_error form-error-email"></div>
+                                <input name="email" id="email" class="form-control" placeholder="Enter your email id*" type="text">
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <label class="form-label">Place of residence*</label>
+                                <div class="error form_error form-error-residence"></div>
+                                <textarea name="residence" class="form-control"></textarea>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <label class="form-label">Your goals*</label>
+                                <div class="error form_error form-error-goals"></div>
+                                <textarea name="goals" class="form-control"></textarea>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <button name="submit" id="submit" class="btn" value="Submit" type="submit">Submit</button>
+                            </div>
+                        </div> -->
+
+                        <div class="clr"></div>
                     </form>
                 </div>
             </div>
@@ -223,7 +332,78 @@
     </div>
 </section>
 
+<section class="last_section">
+    <div class="contain_80">
+        <div class="inner_container">
+            
+            <p>You will learn more about your condition in your free consultation and that will help <br> you make better lifestyle and nutrition choices</p>
+            <p><b>‘Start healing’</b></p>
 
+        </div>
+    </div>
+</section>
+
+
+<script type="text/javascript">
+
+$("#contact_form").on('submit',(function(e){
+        $this = $(this);
+        e.preventDefault();
+        $(".form_error").html("");
+        $(".form_error").removeClass("alert alert-danger");
+
+        var formData = new FormData(this);
+        var $submitButton = $this.find("[type='submit']");
+
+        $this.find(".form_error").html("");
+
+        $submitButton.attr('disabled', 'disabled');
+
+        $.ajax({
+            type: "POST",
+            url: "{{ route('submit-enquiry') }}",
+            data:  new FormData(this),
+            dataType: 'json',
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function(response) {
+                location.href="{{ route('thank-you') }}";
+            },
+            error: function(data){
+                if (data.status === 422) {
+                    let errors = data.responseJSON.errors;
+                    $.each(errors, function (key, message) {
+                        var fieldName = key.replace(/\./g, '-');
+                        $this.find(".form-error-"+fieldName).html(message);
+                        $this.find(".form-error-"+fieldName).addClass('alert alert-danger');
+                        // $('#form-error-' + key).html(message).addClass('alert alert-danger');
+                    });
+                } else if (data.status === 401) {
+                    alert("Please log in.");
+                    // window.location.href = "/login";
+                } else if (data.status === 403) {
+                    alert("You don’t have permission.");
+                } else if (data.status === 404) {
+                    alert("The resource was not found.");
+                } else if (data.status === 500) {
+                    alert("Something went wrong on the server.");
+                    console.log(data.console_message);
+                } else {
+                    alert("Unexpected error: " + data.status);
+                    console.log(data);
+                }
+                {{-- var errors = data.responseJSON;
+                jQuery.each( errors.error.errors, function( i, val ) {
+                    $("#form-error-"+i).html(val);
+                }); --}}
+                $submitButton.removeAttr('disabled');
+            }
+        });
+
+    }));
+
+</script>
 
 <!--sticky header-->
 <!-- <script src="js/classie.js"></script>
