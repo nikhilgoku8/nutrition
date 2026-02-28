@@ -5,7 +5,7 @@
 	#Media Queries
 	#Font-Face */
 :root{
-	--header-height: 1px;
+	--header-height: 103.63px;
 	--beige: #fffde9;
 	--green: #55754e;
 	--gold: #c09b2a;
@@ -21,6 +21,7 @@
 html, body{
 	height: 100%;
 	font-family: "Poppins", sans-serif;
+	scroll-behavior: smooth;
 } 
 
 body{
@@ -168,7 +169,7 @@ header nav {
 	width: unset;
 }
 header .ace-responsive-menu > li{
-	padding: 1vw 2vw;
+	padding: 1vw 1.5vw;
 }
 header .ace-responsive-menu > li:last-child{
 	padding-right: 0;
@@ -565,4 +566,11 @@ section{
 .form_error{
 	font-size: 1vw;
 	color: red;
+}
+
+/*section_link*/
+.section_link{
+	position: absolute;
+	left: 0;
+	top: calc(var(--header-height) * -1);
 }

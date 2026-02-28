@@ -55,10 +55,11 @@
         <!-- Responsive Menu Structure-->
         <!--Note: declare the Menu style in the data-menu-style="horizontal" (options: horizontal, vertical, accordion) -->
         <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
-            <li><a href="#">Process</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Reviews</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="#what-is-free-consultation">What is free consultation</a></li>
+            <li><a href="#next-step">Next step</a></li>
+            <li><a href="#why-early-series">Why early series</a></li>
+            <li><a href="#process">Process</a></li> 
+            <li><a href="#contact-us">Contact Us</a></li>
         </ul>
     </nav>
 </div>
@@ -88,6 +89,7 @@
 <!-- hero -->
 
 <section class="section_2">
+    <span class="section_link" id="what-is-free-consultation"></span>
     <div class="contain_80">
         <div class="inner_container">
             
@@ -128,6 +130,7 @@
 <!-- section_2 -->
 
 <section class="section_3">
+    <span class="section_link" id="next-step"></span>
     <div class="bg_img">
         <img src="images/bg/what-happens-next.png">
     </div>
@@ -155,6 +158,7 @@
 <!-- section_3 -->
 
 <section class="section_4">
+    <span class="section_link" id="why-early-series"></span>
     <div class="contain_90">
         <div class="inner_container">
 
@@ -172,6 +176,7 @@
 <!-- section_4 -->
 
 <section class="section_5">
+    <span class="section_link" id="process"></span>
     <div class="contain_90">
         <div class="inner_container">
 
@@ -192,6 +197,7 @@
 <!-- main -->
 
 <section class="footer">
+    <span class="section_link" id="contact-us"></span>
     <div class="contain_80">
         <div class="inner_container">
             

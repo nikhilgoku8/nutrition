@@ -2,7 +2,7 @@
 /* CSS Document */
 
 :root{
-	--header-height: 1px;
+	/*--header-height: 1px;*/
 	--beige: #fffde9;
 	--green: #55754e;
 	--gold: #c09b2a;
@@ -114,9 +114,9 @@ header {
 	position:relative;
 }
 header.smaller {
-	top:0;
+	/*top:0;
 	height:220px;
-	background-color:#fff;
+	background-color:#fff;*/
 }
 header .logo {
     float:left!important;
@@ -132,10 +132,10 @@ header nav {
     width:100%;
 	}
 header.smaller .logo {
-	width:60%;
+/*	width:60%;
 	text-align:center;
 	margin:0 auto;
-	float:none;
+	float:none;*/
 }
 #main{
 	padding:0px;
@@ -175,8 +175,8 @@ width: 100%;
 }
 header.smaller {
 	top:0;
-	height:110px;
-	background-color:#fff;
+	/*height:110px;*/
+	/*background-color:#fff;*/
 }
 header .logo {
 float: left!important;
