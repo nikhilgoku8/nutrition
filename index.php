@@ -216,8 +216,8 @@
                     <form id="enquire_form" action="" method="POST">
 
                         <ul class="form_pagination">
-                            <li class="form_section_1"></li>
-                            <li class="form_section_2"></li>
+                            <li class="nav_form_section_1 active"></li>
+                            <li class="nav_form_section_2"></li>
                         </ul>
                         <div class="form_section form_section_1">
                             <div class="form_step">Step 1 of 2</div>
@@ -225,7 +225,6 @@
                                 <div class="title">How can we help you?</div>
                             </div>
                             <div class="col-sm-12 form-group">
-                                <label class="form-label">Name*</label>
                                 <div class="error form_error form-error-symtoms"></div>
                                 <div class="checkboxes_wrapper">
                                     <ul>
@@ -255,12 +254,6 @@
                                         </li>
                                         <li>
                                             <label>
-                                                <input type="checkbox" name="symtoms[]" value="Metabolic Syndrome">
-                                                <span>Metabolic Syndrome</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
                                                 <input type="checkbox" name="symtoms[]" value="Fatty Liver">
                                                 <span>Fatty Liver</span>
                                             </label>
@@ -275,53 +268,59 @@
                                 </div>
                             </div>
                             <div class="col-sm-12 form-group">
-                                <button type="button">Next Arrow</button>
+                                <button type="button" class="golden_btn form_section_1_btn">Next <i class="fa-solid fa-arrow-right-long"></i></button>
                             </div>
+                            <div class="clr"></div>
                         </div>
-                        <!-- <div class="form_section form_section_2">
+                        <div class="form_section form_section_2">
                             <div class="form_step">Step 2 of 2</div>
                             <div class="col-sm-12 form-group">
-                                <div class="title">How can we help you?</div>
+                                <div class="title">Fill the form</div>
                             </div>
-                            <div class="col-sm-12 form-group">
-                                <label class="form-label">First Name*</label>
-                                <div class="error form_error form-error-fname"></div>
-                                <input name="fname" id="fname" class="form-control" placeholder="Enter your First Name*" type="text">
+                            <div class="clr"></div>
+                            <div class="form_2_wrapper">
+                                <div class="col-sm-6 form-group">
+                                    <label class="form-label">First Name*</label>
+                                    <div class="error form_error form-error-fname"></div>
+                                    <input name="fname" id="fname" class="form-control" type="text">
+                                </div>
+                                <div class="col-sm-6 form-group">
+                                    <label class="form-label">Last Name*</label>
+                                    <div class="error form_error form-error-lname"></div>
+                                    <input name="lname" id="lname" class="form-control" type="text">
+                                </div>
+                                <div class="col-sm-6 form-group">
+                                    <label class="form-label">Age*</label>
+                                    <div class="error form_error form-error-age"></div>
+                                    <input name="age" id="age" class="form-control" type="text">
+                                </div>
+                                <div class="col-sm-6 form-group">
+                                    <label class="form-label">Mobile*</label>
+                                    <div class="error form_error form-error-phone"></div>
+                                    <input name="phone" id="phone" class="form-control" type="text">
+                                </div>
+                                <div class="col-sm-12 form-group">
+                                    <label class="form-label">Email*</label>
+                                    <div class="error form_error form-error-email"></div>
+                                    <input name="email" id="email" class="form-control" type="text">
+                                </div>
+                                <div class="col-sm-12 form-group">
+                                    <label class="form-label">Place of residence*</label>
+                                    <div class="error form_error form-error-residence"></div>
+                                    <textarea name="residence" class="form-control"></textarea>
+                                </div>
+                                <div class="col-sm-12 form-group">
+                                    <label class="form-label">Your goals*</label>
+                                    <div class="error form_error form-error-goals"></div>
+                                    <textarea name="goals" class="form-control"></textarea>
+                                </div>
+                                <div class="clr"></div>
                             </div>
-                            <div class="col-sm-12 form-group">
-                                <label class="form-label">Last Name*</label>
-                                <div class="error form_error form-error-fname"></div>
-                                <input name="lname" id="lname" class="form-control" placeholder="Enter your Last Name*" type="text">
+                            <div class="col-sm-12 form-group btn_wrapper">
+                                <button name="submit" id="submit" class="golden_btn" value="Submit" type="submit">Submit</button>
                             </div>
-                            <div class="col-sm-12 form-group">
-                                <label class="form-label">Age*</label>
-                                <div class="error form_error form-error-age"></div>
-                                <input name="age" id="age" class="form-control" placeholder="Enter your age*" type="text">
-                            </div>
-                            <div class="col-sm-12 form-group">
-                                <label class="form-label">Mobile*</label>
-                                <div class="error form_error form-error-phone"></div>
-                                <input name="phone" id="phone" class="form-control" placeholder="Enter your mobile no*" type="text">
-                            </div>
-                            <div class="col-sm-12 form-group">
-                                <label class="form-label">Email*</label>
-                                <div class="error form_error form-error-email"></div>
-                                <input name="email" id="email" class="form-control" placeholder="Enter your email id*" type="text">
-                            </div>
-                            <div class="col-sm-12 form-group">
-                                <label class="form-label">Place of residence*</label>
-                                <div class="error form_error form-error-residence"></div>
-                                <textarea name="residence" class="form-control"></textarea>
-                            </div>
-                            <div class="col-sm-12 form-group">
-                                <label class="form-label">Your goals*</label>
-                                <div class="error form_error form-error-goals"></div>
-                                <textarea name="goals" class="form-control"></textarea>
-                            </div>
-                            <div class="col-sm-12 form-group">
-                                <button name="submit" id="submit" class="btn" value="Submit" type="submit">Submit</button>
-                            </div>
-                        </div> -->
+                            <div class="clr"></div>
+                        </div>
 
                         <div class="clr"></div>
                     </form>
@@ -331,6 +330,22 @@
         </div>
     </div>
 </section>
+
+<!-- Cal inline embed code begins -->
+<!-- <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-15min"></div>
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "15min", {origin:"https://app.cal.com"});
+
+  Cal.ns["15min"]("inline", {
+    elementOrSelector:"#my-cal-inline-15min",
+    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+    calLink: "nutrition-with-vibha/15min",
+  });
+
+  Cal.ns["15min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+  </script> -->
+  <!-- Cal inline embed code ends -->
 
 <section class="last_section">
     <div class="contain_80">
@@ -346,7 +361,36 @@
 
 <script type="text/javascript">
 
-$("#contact_form").on('submit',(function(e){
+$(".form_section_1_btn").on("click", function () {
+
+    let checked = $("input[name='symtoms[]']:checked").length;
+
+    if (checked === 0) {
+        $(".form-error-symtoms").text("Please select at least one option.");
+        return;
+    }
+
+    $(".form-error-symtoms").text("");
+
+    $(".form_section_1").fadeOut(300, function () {
+        $(".form_section_2").fadeIn(300);
+    });
+
+    $(".form_pagination li").removeClass("active");
+    $(".form_pagination .nav_form_section_2").addClass("active");
+});
+
+$(".form_pagination .nav_form_section_1").on("click", function () {
+
+    $(".form_section_2").fadeOut(300, function () {
+        $(".form_section_1").fadeIn(300);
+    });
+
+    $(".form_pagination li").removeClass("active");
+    $(this).addClass("active");
+});
+
+$("#enquire_form").on('submit',(function(e){
         $this = $(this);
         e.preventDefault();
         $(".form_error").html("");
@@ -361,18 +405,18 @@ $("#contact_form").on('submit',(function(e){
 
         $.ajax({
             type: "POST",
-            url: "{{ route('submit-enquiry') }}",
+            url: "form_process.php",
             data:  new FormData(this),
             dataType: 'json',
             cache: false,
             contentType: false,
             processData: false,
             success: function(response) {
-                location.href="{{ route('thank-you') }}";
+                location.href="thank-you.php";
             },
             error: function(data){
                 if (data.status === 422) {
-                    let errors = data.responseJSON.errors;
+                    let errors = data.responseJSON.error.errors;
                     $.each(errors, function (key, message) {
                         var fieldName = key.replace(/\./g, '-');
                         $this.find(".form-error-"+fieldName).html(message);
@@ -393,10 +437,10 @@ $("#contact_form").on('submit',(function(e){
                     alert("Unexpected error: " + data.status);
                     console.log(data);
                 }
-                {{-- var errors = data.responseJSON;
-                jQuery.each( errors.error.errors, function( i, val ) {
-                    $("#form-error-"+i).html(val);
-                }); --}}
+                // var errors = data.responseJSON;
+                // jQuery.each( errors.error.errors, function( i, val ) {
+                //     $("#form-error-"+i).html(val);
+                // });
                 $submitButton.removeAttr('disabled');
             }
         });
@@ -406,7 +450,7 @@ $("#contact_form").on('submit',(function(e){
 </script>
 
 <!--sticky header-->
-<!-- <script src="js/classie.js"></script>
+<script src="js/classie.js"></script>
 <script>
 function init() {
 window.addEventListener('scroll', function(e){
@@ -423,7 +467,7 @@ window.addEventListener('scroll', function(e){
 });
 }
 window.onload = init();
-</script> -->
+</script>
 <script src="js/common.js"></script>
 <script src="js/jquery.easing.1.3.js"></script>
 

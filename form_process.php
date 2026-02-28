@@ -12,50 +12,97 @@ $form_errors_array = [];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    if (empty($_POST["user_mobile"])) {
-        $form_errors_array['user_mobile'] = "Phone is required";
+    if (empty($_POST["symtoms"])) {
+        $form_errors_array['symtoms'] = "Symtoms are required";
         $error_flag = 1;
     } else {
-        $user_mobile = test_input($_POST["user_mobile"]);
+        $symtoms = test_input(implode(', ', $_POST["symtoms"]));
+    }
 
-        if (!preg_match("/^[0-9]{10}$/", $user_mobile)) {
-            $form_errors_array['user_mobile'] = "Phone number must be exactly 10 digits";
+    if (empty($_POST["fname"])) {
+        $form_errors_array['fname'] = "First Name is required";
+        $error_flag = 1;
+    } else {
+        $fname = test_input($_POST["fname"]);
+    }
+
+    if (empty($_POST["lname"])) {
+        $form_errors_array['lname'] = "Last Name is required";
+        $error_flag = 1;
+    } else {
+        $lname = test_input($_POST["lname"]);
+    }
+
+    if (empty($_POST["age"])) {
+        $form_errors_array['age'] = "Age is required";
+        $error_flag = 1;
+    } else {
+        $age = test_input($_POST["age"]);
+
+        if (!preg_match("/^[0-9]/", $age)) {
+            $form_errors_array['age'] = "Age must be numerical";
             $error_flag = 1;
         }
     }
 
-    if (empty($_POST["enquiry_email"])) {
-        $form_errors_array['enquiry_email'] = "Email is required";
+    if (empty($_POST["phone"])) {
+        $form_errors_array['phone'] = "Phone is required";
         $error_flag = 1;
     } else {
-        $enquiry_email = strtolower( test_input($_POST["enquiry_email"]) );
+        $phone = test_input($_POST["phone"]);
+
+        if (!preg_match("/^[0-9]{10}$/", $phone)) {
+            $form_errors_array['phone'] = "Phone number must be exactly 10 digits";
+            $error_flag = 1;
+        }
+    }
+
+    if (empty($_POST["email"])) {
+        $form_errors_array['email'] = "Email is required";
+        $error_flag = 1;
+    } else {
+        $email = strtolower( test_input($_POST["email"]) );
         // check if e-mail address is well-formed
-        if (!filter_var($enquiry_email, FILTER_VALIDATE_EMAIL)) {
-          $form_errors_array['enquiry_email'] = "Invalid email format"; 
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+          $form_errors_array['email'] = "Invalid email format"; 
           $error_flag = 1;
         }
     }
 
-    if (empty($_POST["mobile"])) {
-        $form_errors_array['mobile'] = "Mobile number is required";
+    if (empty($_POST["residence"])) {
+        $form_errors_array['residence'] = "Residence is required";
         $error_flag = 1;
-    }else {
-        $mobile = test_input($_POST["mobile"]);
-        // check if name only contains letters and whitespace
-        if (!preg_match("/^[0-9]+$/",$mobile)) {
-          $form_errors_array['mobile'] = "Only Numbers allowed"; 
-          $error_flag = 1;
-        }else if(strlen($_POST["mobile"])!=10) {
-            $form_errors_array['mobile'] = "<span>Mobile should be 10 digits.</span>";
-            $error_flag = 1;
-        }
+    } else {
+        $residence = test_input($_POST["residence"]);
     }
+
+    if (empty($_POST["goals"])) {
+        // $form_errors_array['residence'] = "Goals is required";
+        // $error_flag = 1;
+    } else {
+        $residence = test_input($_POST["goals"] ?? '');
+    }
+
+    // if (empty($_POST["mobile"])) {
+    //     $form_errors_array['mobile'] = "Mobile number is required";
+    //     $error_flag = 1;
+    // }else {
+    //     $mobile = test_input($_POST["mobile"]);
+
+    //     if (!preg_match("/^[0-9]+$/",$mobile)) {
+    //       $form_errors_array['mobile'] = "Only Numbers allowed"; 
+    //       $error_flag = 1;
+    //     }else if(strlen($_POST["mobile"])!=10) {
+    //         $form_errors_array['mobile'] = "<span>Mobile should be 10 digits.</span>";
+    //         $error_flag = 1;
+    //     }
+    // }
 
     if ($error_flag == 0) {
 
         $postFields = "entry.1501287950=" .$symptoms;
-        $postFields .= "entry.1833388086=" .$first_name;
-        $postFields .= "entry.1521105153=" .$last_name;
+        $postFields .= "entry.1833388086=" .$fname;
+        $postFields .= "entry.1521105153=" .$lname;
         $postFields .= "entry.824970523=" .$age;
         $postFields .= "entry.1180648196=" .$phone;
         $postFields .= "entry.1162068282=" .$email;
@@ -71,16 +118,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true);
         //print_r($hash);
         $result1 = curl_exec($ch1);  
+        
+        $response = [
+            'success' => ['message' => 'success'],
+            'user_mobile' => $user_mobile,
+        ];
 
-        if ($mailer->sendMobileNumber($user_mobile)) {
-            $response = [
-                'success' => ['message' => 'success'],
-                'user_mobile' => $user_mobile,
-            ];
-        } else {
-            $response = ['error' => ['message' => 'Mail not working']];
-            $statusCode = 422;
-        }
+        // if ($mailer->sendMobileNumber($user_mobile)) {
+        //     $response = [
+        //         'success' => ['message' => 'success'],
+        //         'user_mobile' => $user_mobile,
+        //     ];
+        // } else {
+        //     $response = ['error' => ['message' => 'Mail not working']];
+        //     $statusCode = 422;
+        // }
 
     } else {
         $response = ['error' => ['error_type' => 'form', 'errors' => $form_errors_array]];
