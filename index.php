@@ -231,42 +231,42 @@
                                 <div class="title">How can we help you?</div>
                             </div>
                             <div class="col-sm-12 form-group">
-                                <div class="error form_error form-error-symtoms"></div>
+                                <div class="error form_error form-error-symptoms"></div>
                                 <div class="checkboxes_wrapper">
                                     <ul>
                                         <li>
                                             <label>
-                                                <input type="checkbox" name="symtoms[]" value="Metabolic Syndrome">
+                                                <input type="checkbox" name="symptoms[]" value="Metabolic Syndrome">
                                                 <span>Metabolic Syndrome</span>
                                             </label>
                                         </li>
                                         <li>
                                             <label>
-                                                <input type="checkbox" name="symtoms[]" value="Weight Loss">
+                                                <input type="checkbox" name="symptoms[]" value="Weight Loss">
                                                 <span>Weight Loss</span>
                                             </label>
                                         </li>
                                         <li>
                                             <label>
-                                                <input type="checkbox" name="symtoms[]" value="PCOS">
+                                                <input type="checkbox" name="symptoms[]" value="PCOS">
                                                 <span>PCOS</span>
                                             </label>
                                         </li>
                                         <li>
                                             <label>
-                                                <input type="checkbox" name="symtoms[]" value="Diabetes">
+                                                <input type="checkbox" name="symptoms[]" value="Diabetes">
                                                 <span>Diabetes</span>
                                             </label>
                                         </li>
                                         <li>
                                             <label>
-                                                <input type="checkbox" name="symtoms[]" value="Fatty Liver">
+                                                <input type="checkbox" name="symptoms[]" value="Fatty Liver">
                                                 <span>Fatty Liver</span>
                                             </label>
                                         </li>
                                         <li>
                                             <label>
-                                                <input type="checkbox" name="symtoms[]" value="Anemia">
+                                                <input type="checkbox" name="symptoms[]" value="Anemia">
                                                 <span>Anemia</span>
                                             </label>
                                         </li>
@@ -369,14 +369,14 @@ Cal("init", "15min", {origin:"https://app.cal.com"});
 
 $(".form_section_1_btn").on("click", function () {
 
-    let checked = $("input[name='symtoms[]']:checked").length;
+    let checked = $("input[name='symptoms[]']:checked").length;
 
     if (checked === 0) {
-        $(".form-error-symtoms").text("Please select at least one option.");
+        $(".form-error-symptoms").text("Please select at least one option.");
         return;
     }
 
-    $(".form-error-symtoms").text("");
+    $(".form-error-symptoms").text("");
 
     $(".form_section_1").fadeOut(300, function () {
         $(".form_section_2").fadeIn(300);

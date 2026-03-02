@@ -12,11 +12,12 @@ $form_errors_array = [];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    if (empty($_POST["symtoms"])) {
-        $form_errors_array['symtoms'] = "Symtoms are required";
+    if (!isset($_POST["symptoms"]) || count($_POST["symptoms"]) == 0) {
+        $form_errors_array['symptoms'] = "Symptoms are required";
         $error_flag = 1;
     } else {
-        $symtoms = test_input(implode(', ', $_POST["symtoms"]));
+        $symptoms = array_map('test_input', $_POST["symptoms"]);
+        $symptoms = implode(', ', $symptoms);
     }
 
     if (empty($_POST["fname"])) {
@@ -100,14 +101,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($error_flag == 0) {
 
-        $postFields = "entry.1501287950=" .$symptoms;
-        $postFields .= "entry.1833388086=" .$fname;
-        $postFields .= "entry.1521105153=" .$lname;
-        $postFields .= "entry.824970523=" .$age;
-        $postFields .= "entry.1180648196=" .$phone;
-        $postFields .= "entry.1162068282=" .$email;
-        $postFields .= "entry.1945792923=" .$residence;
-        $postFields .= "entry.366623633=" .$goals;
+        $postFields = "&entry.1501287950=" .$symptoms;
+        $postFields .= "&entry.1833388086=" .$fname;
+        $postFields .= "&entry.1521105153=" .$lname;
+        $postFields .= "&entry.824970523=" .$age;
+        $postFields .= "&entry.1180648196=" .$phone;
+        $postFields .= "&entry.1162068282=" .$email;
+        $postFields .= "&entry.1945792923=" .$residence;
+        $postFields .= "&entry.366623633=" .$goals;
 
 
         $ch1 = curl_init();
