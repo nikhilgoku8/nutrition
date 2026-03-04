@@ -75,78 +75,21 @@ $(document).ready(function() {
 
 	/************************************End Main Slider*************************************/
 
-    $('.home_clients_slider').owlCarousel({
+    $('.books_slider').owlCarousel({
+        loop: true,
         nav: false,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout:1000,
         dots: false,
+        autoplay: false,
+        autoplayTimeout:3000,
         responsive: {
           0: {
             items: 1
           },
           600: {
-            items: 3
-          },
-          1000: {
-            items: 9
-          }
-        }
-    });
-
-
-    $('.home_blog_slider').owlCarousel({
-      nav: true,
-      loop: true,
-      autoplay: true,
-      dots: false,
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 1
-        },
-        1000: {
-          items: 1
-        }
-      }
-    });
-
-
-    $('.special_project_slider').owlCarousel({
-      nav: false,
-      loop: true,
-      autoplay: true,
-      dots: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 1
-        },
-        1000: {
-          items: 1
-        }
-      }
-    });
-
-
-    $('.clients_slider').owlCarousel({
-        nav: true,
-        loop: true,
-        autoplay: true,
-        dots: false,
-        responsive: {
-          0: {
             items: 1
           },
-          600: {
-            items: 3
-          },
           1000: {
-            items: 5
+            items: 1
           }
         }
     });

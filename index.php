@@ -24,13 +24,19 @@
 <link href="plugins/owl-carousel/owl.carousel.min.css" rel="stylesheet">
 <link href="plugins/owl-carousel/owl.theme.default.min.css" rel="stylesheet">
 
-<link href="plugins/venobox/venobox.min.css" rel="stylesheet" type="text/css" media="screen" />
+<!-- <link href="plugins/venobox/venobox.min.css" rel="stylesheet" type="text/css" media="screen" /> -->
 
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href="css/responsive.css" rel="stylesheet" type="text/css" />
 
 <!-- <script src="js/jquery.3.7.1.min.js"></script> -->
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+<!-- GSAP core -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<!-- ScrollTrigger plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
 </head>
 
@@ -40,7 +46,7 @@
 
 <div class="contain_90">
     <div class="logo">
-        <a href="index.php"><img src="images/logo.png" alt="" /></a>
+        <a href="./"><img src="images/logo.png" alt="" /></a>
     </div>
     <nav>
         <!-- Menu Toggle btn-->
@@ -77,10 +83,10 @@
         <div class="inner_container">
             
             <div class="text_box">
-                <div class="line_1">Your First Step to Better<br> Health Starts Here.</div>
-                <div class="line_2">Your first personalised nutrition<br> consultation absolutely free.</div>
+                <div class="line_1 fade-in-right">Your First Step to Better<br> Health Starts Here.</div>
+                <div class="line_2 fade-in-right">Your first personalised nutrition<br> consultation absolutely free.</div>
             </div>
-            <div class="lady_overlay">
+            <div class="lady_overlay fade-in-up">
                 <img src="images/lady-with-fruits.png">
             </div>
         </div>
@@ -93,7 +99,7 @@
     <div class="contain_80">
         <div class="inner_container">
             
-            <div class="text_wrapper">
+            <div class="text_wrapper fade-in-up">
                 <p>If you’re struggling with diabetes, PCOS, metabolic syndrome, fatty liver,
                 anemia, or struggling with weight and lifestyle concerns, nutrition can help
                 your body respond better to treatment.</p>
@@ -103,26 +109,26 @@
                 <p><b><i>This free consultation is a calm, judgement free space to:</i></b></p>
             </div>
             <div class="three_boxes">
-                <div class="info_box">
+                <div class="info_box fade-in-scale-up">
                     <div class="img_box">
                         <img src="images/food-plate.jpg">
                     </div>
                     <div class="text">Understand your condition and lifestyle</div>
                 </div>
-                <div class="info_box">
+                <div class="info_box fade-in-scale-up">
                     <div class="img_box">
                         <img src="images/doctor-with-food.jpg">
                     </div>
                     <div class="text">Learn how nutrition can support our medical treatment </div>
                 </div>
-                <div class="info_box">
+                <div class="info_box fade-in-scale-up">
                     <div class="img_box">
                         <img src="images/girl-in-matrix.jpg">
                     </div>
                     <div class="text">Gain clarity on the next right step for your body</div>
                 </div>
             </div>
-            <p class="center">There is no pressure to commit. Only guidance to help you make the right choice for your health.</p>
+            <p class="center fade-in-up">There is no pressure to commit. Only guidance to help you make the right choice for your health.</p>
 
         </div>
     </div>
@@ -138,10 +144,10 @@
         <div class="contain_90">
             <div class="inner_container">
 
-                <div class="left_pane">
+                <div class="left_pane fade-in-left">
                     <div class="text">What Happens Next</div>
                 </div>
-                <div class="right_pane">
+                <div class="right_pane fade-in-right">
                     <ul>
                         <li>Book your free consultation using the calendar below</li>
                         <li>Receive a personalised WhatsApp welcome message</li>
@@ -163,9 +169,9 @@
         <div class="inner_container">
 
             <div class="left_pane">
-                <div class="text">Why The Early Series Book?</div>
+                <div class="text fade-in-left">Why The Early Series Book?</div>
             </div>
-            <div class="right_pane">
+            <div class="right_pane fade-in-right">
                 <p>Once you sign up for selected plans, you receive <br>The Early Series — a practical guide covering: - Early signs <br> Early tests - Early actions</p>
                 <p><b>For nearly 50 clinical and lifestyle conditions. <br>(MRP ₹999 | Complimentary with eligible plans)</b></p>
             </div>
@@ -178,23 +184,35 @@
 <section class="section_5">
     <span class="section_link" id="process"></span>
     <div class="contain_90">
-        <div class="inner_container">
+        <div class="inner_container fade-in-scale-up">
+            <div class="books_slider owl-carousel owl-theme">
 
-            <div class="img_box">
-                <img src="images/book.png">
-            </div>
-            <div class="text">
-                Once you sign up for selected plans, you receive The Healthy Eats a treasure trove of <br> recipes – More than 100 recipes Breakfast, snack, main meals, dessert – with insights on<br> nutrition and health
-            </div>
-            <div class="golden_band">More than 100 recipes including traditional gems (MRP ₹1499 | Complimentary with eligible plans)</div>
+                <div class="item_box healthy_book">
+                    <div class="img_box">
+                        <img src="images/healthy-book.png">
+                    </div>
+                    <div class="text">
+                        Once you sign up for selected plans, you receive The Healthy Eats a treasure trove of <br> recipes – More than 100 recipes Breakfast, snack, main meals, dessert – with insights on<br> nutrition and health
+                    </div>
+                    <div class="golden_band">More than 100 recipes including traditional gems (MRP ₹1499 | Complimentary with eligible plans)</div>
+                </div>
+                <div class="item_box">
+                    <div class="img_box">
+                        <img src="images/book.png">
+                    </div>
+                    <!-- <div class="text">
+                        Once you sign up for selected plans, you receive The Healthy Eats a treasure trove of <br> recipes – More than 100 recipes Breakfast, snack, main meals, dessert – with insights on<br> nutrition and health
+                    </div>
+                    <div class="golden_band">More than 100 recipes including traditional gems (MRP ₹1499 | Complimentary with eligible plans)</div> -->
+                </div>
 
+            </div>
         </div>
     </div>
 </section>
 <!-- section_5 -->
 
-</div>
-<!-- main -->
+
 
 <section class="footer">
     <span class="section_link" id="contact-us"></span>
@@ -364,6 +382,9 @@ Cal("init", "15min", {origin:"https://app.cal.com"});
     </div>
 </section>
 
+</div>
+<!-- main -->
+
 
 <script type="text/javascript">
 
@@ -489,7 +510,7 @@ $(document).ready(function () {
 });
 </script>
 
-<script src="plugins/venobox/venobox.min.js"></script>
+<!-- <script src="plugins/venobox/venobox.min.js"></script>
 <script>
 $(document).ready(function(){
     new VenoBox({
@@ -500,7 +521,7 @@ $(document).ready(function(){
         // spinner: 'rotating-plane'
     });
 });
-</script>
+</script> -->
 
 <script src="js/wow.min.js"></script>
 <script>
@@ -510,6 +531,8 @@ new WOW().init();
 <!--slider-->
 <script src="plugins/owl-carousel/owl.carousel.js"></script>
 <script src="plugins/owl-carousel/owl-content-animation.js"></script>
+
+<script src="js/custom.js"></script>
 
 </body>
 </html>

@@ -323,6 +323,9 @@ header .ace-responsive-menu > li > a{
 .section_5 .img_box{
 	width: 90%;
 }
+.section_5 .healthy_book .img_box{
+	width: 60%;
+}
 .section_5 .text br{
 	display: none;
 }

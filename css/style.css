@@ -389,12 +389,37 @@ section{
 }
 .section_5{
 	background: var(--green);
-	padding: 5vw 0;
+	/*padding: 5vw 0;*/
 	text-align: center;
+}
+.section_5 .owl-carousel .owl-stage{
+	display: flex;
+	align-items: center;
+}
+.section_5 .item_box{
+	padding: 5vw 0;
+	position: relative;
 }
 .section_5 .img_box{
 	width: 50%;
 	margin: auto;
+}
+.section_5 .healthy_book{
+	position: relative;
+}
+.section_5 .healthy_book::before{
+	position: absolute;
+    content: '';
+    left: 14%;
+    top: 0;
+    width: 72%;
+    height: 100%;
+    background: url(../images/bg/book-white-bg.png) no-repeat;
+    background-size: contain;
+    background-position: top;
+}
+.section_5 .healthy_book .img_box{
+    width: 30%;
 }
 .section_5 .text{
 	color: #fff;
