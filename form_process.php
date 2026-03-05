@@ -81,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // $form_errors_array['residence'] = "Goals is required";
         // $error_flag = 1;
     } else {
-        $residence = test_input($_POST["goals"] ?? '');
+        $goals = test_input($_POST["goals"] ?? '');
     }
 
     // if (empty($_POST["mobile"])) {
