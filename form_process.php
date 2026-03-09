@@ -119,6 +119,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true);
         //print_r($hash);
         $result1 = curl_exec($ch1);  
+
+        $apiKey = "GvchWB2R2Nxb0Q9uo9QzLw";
+        $tagId = "17254894";
+
+        $ckFields = [
+            'api_key' => $apiKey,
+            'email' => $email,
+            'first_name' => $fname
+        ];
+
+        $ch2 = curl_init();
+        curl_setopt($ch2, CURLOPT_URL, "https://api.convertkit.com/v3/tags/".$tagId."/subscribe");
+        curl_setopt($ch2, CURLOPT_POST, 1);
+        curl_setopt($ch2, CURLOPT_POSTFIELDS, http_build_query($ckFields));
+        curl_setopt($ch2, CURLOPT_RETURNTRANSFER, true);
+
+        $ckResult = curl_exec($ch2);
+        curl_close($ch2);
         
         $response = [
             'success' => ['message' => 'success'],
