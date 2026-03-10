@@ -140,7 +140,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         $response = [
             'success' => ['message' => 'success'],
-            'user_mobile' => $user_mobile,
+            'user_mobile' => $phone,
         ];
 
         // if ($mailer->sendMobileNumber($user_mobile)) {
