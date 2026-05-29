@@ -242,20 +242,37 @@ section{
 .hero .inner_container .text_box{
 	width: calc(100% - var(--image-size));
 	padding: 0 0 0 5vw;
+	margin: auto 0 0 0;
 }
 .hero .inner_container .text_box .line_1{
 	font-family: 'Cresinta';
-	font-size: 5.5vw;
+	font-size: 4.5vw;
+    line-height: 1.2;
 	color: #fff;
 }
 .hero .inner_container .text_box .line_2{
-	font-size: 2vw;
+	font-size: 1.8vw;
+    line-height: 1.3;
     color: #fff;
     background: #ca3c26;
-    padding: 1vw 2vw;
-    text-transform: uppercase;
-    /*opacity: 0.5;*/
+    padding: 1vw 13vw 1vw 2vw;
+    text-transform: none;
     margin: 2vw 0 0 0;
+}
+.hero .inner_container .text_box .line_2 .inner_line{
+	border-bottom: 1px solid #e3a088;
+	padding: 0.5vw 0;
+	font-weight: 500;
+}
+.hero .inner_container .text_box .line_2 .inner_line:last-child{
+	border: none;
+}
+.hero .inner_container .text_box .line_2 .inner_line .yellow{
+	color: #fff629;
+}
+.hero .inner_container .text_box .line_3{
+	color: #fff;
+	padding: 1vw 13vw 1vw 1vw;
 }
 .hero .inner_container .lady_overlay{
 	width: var(--image-size);

@@ -95,14 +95,40 @@ src="https://www.facebook.com/tr?id=1998748663982420&ev=PageView&noscript=1"
   
 <section class="hero">
     <!-- <div class="img_box">
-        <img src="images/banner.jpg" alt="" title="">
+        <img src="images/banner-new.jpg" alt="" title="">
     </div> -->
-    <div class="contain_90">
+    <!-- <div class="contain_90">
         <div class="inner_container">
             
             <div class="text_box">
                 <div class="line_1 fade-in-right">Your First Step to Better<br> Health Starts Here.</div>
                 <div class="line_2 fade-in-right">Your first personalised nutrition<br> consultation absolutely free.</div>
+            </div>
+            <div class="lady_overlay fade-in-up">
+                <img src="images/lady-with-fruits.png">
+            </div>
+        </div>
+    </div> -->
+    <div class="contain_90">
+        <div class="inner_container">
+            
+            <div class="text_box">
+                <div class="line_1 fade-in-right">To avail free consultations <br> follow the steps below.</div>
+                <div class="line_2 fade-in-right">
+                    <div class="inner_line">
+                        <span class="yellow">Step 1:</span>
+                        <span>Fill contact form below.</span>
+                    </div>
+                    <div class="inner_line">
+                        <span class="yellow">Step 2:</span>
+                        <span>Select appointment in calender to book your consultation absolutely at no cost.</span>
+                    </div>
+                    <div class="inner_line">
+                        <span class="yellow">Step 3:</span>
+                        <span>You will get a call back from us in 24 hrs</span>
+                    </div>
+                </div>
+                <div class="line_3 fade-in-right">Note - step 1 and step 2 are mandatory only after you will receive a call from us within 24hrs.</div>
             </div>
             <div class="lady_overlay fade-in-up">
                 <img src="images/lady-with-fruits.png">

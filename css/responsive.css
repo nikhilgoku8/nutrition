@@ -221,7 +221,7 @@ header .ace-responsive-menu > li > a{
 	width: 90%;
 }
 .hero::before{
-	border-top: 4vh solid transparent;
+	border-top: 2vh solid transparent;
 }
 .hero .inner_container{
 	/*flex-direction: column;*/
@@ -239,10 +239,18 @@ header .ace-responsive-menu > li > a{
 	left: -30%;
 }
 .hero .inner_container .text_box .line_1{
-	font-size: 6vw;
+	font-size: 5vw;
+}
+.hero .inner_container .text_box .line_1 br{
+	display: none;
 }
 .hero .inner_container .text_box .line_2{
 	font-size: 2.8vw;
+	padding: 1vw 8vw 1vw 2vw;
+}
+.hero .inner_container .text_box .line_3 {
+	font-size: 2.5vw;
+    padding: 1vw 6vw 4vw 1vw;
 }
 .section_2{
 	padding: 5vw 0;
