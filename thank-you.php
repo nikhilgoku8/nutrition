@@ -49,12 +49,13 @@ src="https://www.facebook.com/tr?id=1998748663982420&ev=PageView&noscript=1"
 	width: 300px;
 	max-width: 90%;
 }
-.thank_you_page .inner_container h1{
+.thank_you_page .inner_container .line_1{
 	padding: 2vw 0;
-}
-.thank_you_page .inner_container p{
-	padding: 0 0 2vw 0;
 	font-size: 18px;
+}
+.thank_you_page .inner_container .line_2{
+	font-size: 2em;	
+	padding: 0 0 2vw 0;
 }
 
 </style>
@@ -68,8 +69,8 @@ src="https://www.facebook.com/tr?id=1998748663982420&ev=PageView&noscript=1"
 				<img src="images/logo.png">
 			</a>
 		</div>
-		<h1>Thank you for taking the first step.</h1>
-		<p>Now book your FREE consultation slot - absolutely no cost, only your time.</p>
+		<h1 class="line_1">Thank you for taking the first step.</h1>
+		<p class="line_2">Now book your FREE consultation slot - absolutely no cost, only your time.</p>
 
 		
 
