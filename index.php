@@ -44,8 +44,8 @@ src="https://www.facebook.com/tr?id=1998748663982420&ev=PageView&noscript=1"
 
 <!-- <link href="plugins/venobox/venobox.min.css" rel="stylesheet" type="text/css" media="screen" /> -->
 
-<link href="css/style.css" rel="stylesheet" type="text/css" />
-<link href="css/responsive.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css?version=<?php echo date('Ymdhis'); ?>" rel="stylesheet" type="text/css" />
+<link href="css/responsive.css?version=<?php echo date('Ymdhis'); ?>" rel="stylesheet" type="text/css" />
 
 <!-- <script src="js/jquery.3.7.1.min.js"></script> -->
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
