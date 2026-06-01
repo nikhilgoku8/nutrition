@@ -70,7 +70,7 @@ src="https://www.facebook.com/tr?id=1998748663982420&ev=PageView&noscript=1"
 			</a>
 		</div>
 		<h1 class="line_1">Thank you for taking the first step.</h1>
-		<p class="line_2">Now book your FREE consultation slot - absolutely no cost, only your time.</p>
+		<p class="line_2">Now book your consultation slot - absolutely no cost, only your time.</p>
 
 		
 
